@@ -1,373 +1,172 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8" />
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
-<title>Personal Portfolio</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Image Generator</title>
+  <style>
+    body {
+      font-family: 'Arial', sans-serif;
+      text-align: center;
+      margin: 20px;
+      background-color: #f5f5f5;
+    }
 
-<!-- Google fonts -->
-<link href='http://fonts.googleapis.com/css?family=Roboto:400,300,700' rel='stylesheet' type='text/css'>
-<link href='http://fonts.googleapis.com/css?family=Josefin+Sans:600' rel='stylesheet' type='text/css'>
+    h1 {
+      color: #3498db;
+    }
 
-<!-- font awesome -->
-<link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
+    #image-container {
+      position: relative;
+      margin-top: 20px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
 
-<!-- bootstrap -->
-<link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css" />
+    #image-container img {
+      max-width: 100%;
+      border-radius: 8px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      transition: opacity 0.5s ease-in-out;
+    }
 
-<!-- animate.css -->
-<link rel="stylesheet" href="assets/animate/animate.css" />
-<link rel="stylesheet" href="assets/animate/set.css" />
+    #overlay {
+      position: absolute;
+      bottom: 0;
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+      padding: 10px;
+      box-sizing: border-box;
+      background: rgba(255, 255, 255, 0.7);
+    }
 
-<!-- gallery -->
-<link rel="stylesheet" href="assets/gallery/blueimp-gallery.min.css">
+    #keyword-input {
+      padding: 10px;
+      font-size: 16px;
+      margin-right: 10px;
+    }
 
-<!-- favicon -->
-<link rel="shortcut icon" href="images/favicon.jpg" type="image/x-icon">
-<link rel="icon" href="images/favicon.jpg" type="image/x-icon">
+    #generate-button {
+      padding: 12px 24px;
+      font-size: 16px;
+      cursor: pointer;
+      background-color: #3498db;
+      color: #fff;
+      border: none;
+      border-radius: 4px;
+      transition: background-color 0.3s ease;
+    }
 
+    #generate-button:hover {
+      background-color: #2980b9;
+    }
 
-<link rel="stylesheet" href="assets/style.css">
+    .arrow-button {
+      padding: 18px 32px;
+      font-size: 16px;
+      cursor: pointer;
+      background-color: #3498db;
+      color: #fff;
+      border: none;
+      border-radius: 4px;
+      transition: background-color 0.3s ease, transform 0.3s ease;
+    }
 
+    .arrow-button:hover {
+      background-color: #2980b9;
+      transform: scale(1.1);
+    }
+  </style>
 </head>
-
 <body>
-
-
-<div id="home">
-<!-- Slider Starts -->
-<div class="banner">
-          <img src="images/back.jpg" alt="banner" class="img-responsive">
-          <div class="caption">
-            <div class="caption-wrapper">
-              <div class="caption-info">              
-              <img src="images/portfolio/2023-11-24 14_59_20- dev picture.png" class="img-circle profile">
-              <h1 class="animated bounceInUp">Frontend and Backend developer</h1>
-              <p class="animated bounceInLeft">Here you will find my main projects in Web Developpment! </p>
-             <div class="animated bounceInDown"><a href="#works" class="btn btn-default explore">View My Works</a></div>
-             <div class="animated bounceInDown"><a href="#works" class="btn btn-default explore">View My Technical Skills</a></div>
-             <div class="animated bounceInDown"><a href="#contact" class="btn btn-default explore">Contact</a></div>
-
-
-              </div>
-            </div>
-          </div>
-</div>
-<!-- #Slider Ends -->
-</div>
-
-
-
-  <br><br><br><br><br><br>
-
-
-
-
-
-
-
-
-<!-- works -->
-<div id="works"  class=" clearfix grid"> 
-    <figure class="effect-oscar  wowload fadeInUp">
-        <img src="images/portfolio/2023-11-24 12_26_29-Mobile First Statique.png" alt="img01"/>
-        <figcaption>
-            <h2>Mobile First Website</h2>
-            <p>Lily likes to play with crayons and pencils<br>
-            <a href="https://omccc.github.io/mobile-first-html-static/">View more</a></p>            
-        </figcaption>
-    </figure>
-     <figure class="effect-oscar  wowload fadeInUp">
-        <img src="images/portfolio/2023-11-24 12_33_05-MusicBandProject.png" alt="img01"/>
-        <figcaption>
-            <h2>Musicbandproject</h2>
-            <p>Lily likes to play with crayons and pencils<br>
-            <a href="https://omccc.github.io/Musicbandproject/">View more</a></p>            
-        </figcaption>
-    </figure>
-     <figure class="effect-oscar  wowload fadeInUp">
-        <img src="images/portfolio/2023-11-24 14_54_58-Form Generator.png" alt="img01"/>
-        <figcaption>
-            <h2>Customizable form</h2>
-            <p>Lily likes to play with crayons and pencils<br>
-            <a href="https://omccc.github.io/Form_Generator/">View more</a></p>            
-        </figcaption>
-    </figure>
-     <figure class="effect-oscar  wowload fadeInUp">
-        <img src="images/portfolio/4.jpg" alt="img01"/>
-        <figcaption>
-            <h2>Fruits</h2>
-            <p>Lily likes to play with crayons and pencils<br>
-            <a href="images/portfolio/4.jpg" title="1" data-gallery>View more</a></p>            
-        </figcaption>
-    </figure>
-     
-     <figure class="effect-oscar  wowload fadeInUp">
-        <img src="images/portfolio/5.jpg" alt="img01"/>
-        <figcaption>
-            <h2>Breakfast</h2>
-            <p>Lily likes to play with crayons and pencils<br>
-            <a href="images/portfolio/5.jpg" title="1" data-gallery>View more</a></p>            
-        </figcaption>
-    </figure>
-    <figure class="effect-oscar  wowload fadeInUp">
-        <img src="images/portfolio/6.jpg" alt="img01"/>
-        <figcaption>
-            <h2>Kitchen</h2>
-            <p>Lily likes to play with crayons and pencils<br>
-            <a href="images/portfolio/6.jpg" title="1" data-gallery>View more</a></p>            
-        </figcaption>
-    </figure>
-    <figure class="effect-oscar  wowload fadeInUp">
-        <img src="images/portfolio/1.jpg" alt="img01"/>
-        <figcaption>
-            <h2>Cappuchino</h2>
-            <p>Lily likes to play with crayons and pencils<br>
-            <a href="images/portfolio/1.jpg" title="1" data-gallery>View more</a></p>            
-        </figcaption>
-    </figure>
-     <figure class="effect-oscar  wowload fadeInUp">
-        <img src="images/portfolio/2.jpg" alt="img01"/>
-        <figcaption>
-            <h2>Latte</h2>
-            <p>Lily likes to play with crayons and pencils<br>
-            <a href="images/portfolio/2.jpg" title="1" data-gallery>View more</a></p>            
-        </figcaption>
-    </figure>
-     <figure class="effect-oscar  wowload fadeInUp">
-        <img src="images/portfolio/3.jpg" alt="img01"/>
-        <figcaption>
-            <h2>Ambience</h2>
-            <p>Lily likes to play with crayons and pencils<br>
-            <a href="images/portfolio/3.jpg" title="1" data-gallery>View more</a></p>            
-        </figcaption>
-    </figure>
-     <figure class="effect-oscar  wowload fadeInUp">
-        <img src="images/portfolio/4.jpg" alt="img01"/>
-        <figcaption>
-            <h2>Fruits</h2>
-            <p>Lily likes to play with crayons and pencils<br>
-            <a href="images/portfolio/4.jpg" title="1" data-gallery>View more</a></p>            
-        </figcaption>
-    </figure>
-     
-     <figure class="effect-oscar  wowload fadeInUp">
-        <img src="images/portfolio/5.jpg" alt="img01"/>
-        <figcaption>
-            <h2>Breakfast</h2>
-            <p>Lily likes to play with crayons and pencils<br>
-            <a href="images/portfolio/5.jpg" title="1" data-gallery>View more</a></p>            
-        </figcaption>
-    </figure>
-    <figure class="effect-oscar  wowload fadeInUp">
-        <img src="images/portfolio/6.jpg" alt="img01"/>
-        <figcaption>
-            <h2>Kitchen</h2>
-            <p>Lily likes to play with crayons and pencils<br>
-            <a href="images/portfolio/6.jpg" title="1" data-gallery>View more</a></p>            
-        </figcaption>
-    </figure>
-     
-    
-    
-
-     
-</div>
-<!-- works -->
-
-
-
-
-
-<div id="testimonials" class="container spacer ">
-	<h2 class="text-center  wowload fadeInUp">Testimonails</h2>
-  <div class="clearfix">    
-    <div class="col-sm-6 col-sm-offset-3">
-
-
-    <div id="carousel-testimonials" class="carousel slide testimonails  wowload fadeInRight" data-ride="carousel">
-    <div class="carousel-inner">  
-      <div class="item active animated bounceInRight row">
-      <div class="animated slideInLeft col-xs-2"><img alt="portfolio" src="images/team/1.jpg" width="100" class="img-circle img-responsive"></div>
-      <div  class="col-xs-10">
-      <p> I must explain to you how all this mistaken idea of denouncing pleasure and praising pain was born and I will give you a complete account of the system, and expound the actual teachings of the great explorer of the truth, the master-builder of human happiness. </p>      
-      <span>Angel Smith - <b>eshop Canada</b></span>
+  <h1>Image Generator</h1>
+  <div id="image-container">
+    <div id="overlay">
+      <button class="arrow-button" onclick="prevImage()">◀ Previous</button>
+      <div>
+        <label for="keyword-input">Enter a keyword:</label>
+        <input type="text" id="keyword-input" placeholder="e.g., nature">
+        <button id="generate-button" onclick="generateImage()">Generate Image</button>
       </div>
-      </div>
-      <div class="item  animated bounceInRight row">
-      <div class="animated slideInLeft col-xs-2"><img alt="portfolio" src="images/team/2.jpg" width="100" class="img-circle img-responsive"></div>
-      <div  class="col-xs-10">
-      <p>No one rejects, dislikes, or avoids pleasure itself, because it is pleasure, but because those who do not know how to pursue pleasure rationally encounter consequences that are extremely painful.</p>
-      <span>John Partic - <b>Crazy Pixel</b></span>
-      </div>
-      </div>
-      <div class="item  animated bounceInRight row">
-      <div class="animated slideInLeft  col-xs-2"><img alt="portfolio" src="images/team/3.jpg" width="100" class="img-circle img-responsive"></div>
-      <div  class="col-xs-10">
-      <p>On the other hand, we denounce with righteous indignation and dislike men who are so beguiled and demoralized by the charms of pleasure of the moment, so blinded by desire, that they cannot foresee the pain and trouble that are bound to ensue.</p>
-      <span>Harris David - <b>Jet London</b></span>
-      </div>
-      </div>
-  </div>
-
-   <!-- Indicators -->
-   	<ol class="carousel-indicators">
-    <li data-target="#carousel-testimonials" data-slide-to="0" class="active"></li>
-    <li data-target="#carousel-testimonials" data-slide-to="1"></li>
-    <li data-target="#carousel-testimonials" data-slide-to="2"></li>
-  	</ol>
-  	<!-- Indicators -->
-  </div>
-
-
-
+      <button class="arrow-button" onclick="nextImage()">Next ▶</button>
     </div>
+    <div id="image-display"></div>
   </div>
 
+  <script>
+    const accessKey = 'VEDJ1PKclWtMrIbAjbZTini7nDORKW91WfDo1oD6Boko';
+    const imageContainer = document.getElementById('image-display');
+    let currentIndex = 0;
+    let images = [];
 
+    function generateImage() {
+      const keyword = document.getElementById('keyword-input').value.trim();
 
-</div>
+      if (!keyword) {
+        alert('Please enter a keyword.');
+        return;
+      }
 
+      const apiUrl = `https://api.unsplash.com/photos/random?query=${encodeURIComponent(keyword)}&client_id=${accessKey}&count=5`;
 
+      fetch(apiUrl)
+        .then(response => response.json())
+        .then(data => {
+          if (data.length > 0) {
+            images = data;
+            currentIndex = 0;
+            displayImage(images[currentIndex].urls.regular);
+          } else {
+            alert('No images found for the specified keyword.');
+          }
+        })
+        .catch(error => {
+          console.error('Error fetching images:', error);
+          alert('An error occurred while fetching the images. Please try again.');
+        });
+    }
 
+    function displayImage(imageUrl) {
+      const imageElement = document.createElement('img');
+      imageElement.src = imageUrl;
+      imageElement.alt = 'Generated Image';
 
+      // Appliquer une animation pour améliorer la transition entre les images
+      imageElement.style.opacity = 0;
 
- <!-- ======= Contact Section ======= -->
- <div id="contact" class="paddsection">
-    <div class="container">
-      <div class="contact-block1">
-        <div class="row">
+      imageElement.onload = () => {
+        imageElement.style.opacity = 1;
+      };
 
-          <div class="col-lg-6">
-            <div class="contact-contact">
+      imageContainer.innerHTML = '';
+      imageContainer.appendChild(imageElement);
+    }
 
-              <h2 class="mb-30">GET IN TOUCH</h2>
+    function prevImage() {
+      if (currentIndex > 0) {
+        currentIndex--;
+        fadeOutAndChangeImage();
+      }
+    }
 
-              <ul class="contact-details">
-                <li><span>Lyon, FRANCE</span></li>
-                <li><span>0606766084</span></li>
+    function nextImage() {
+      if (currentIndex < images.length - 1) {
+        currentIndex++;
+        fadeOutAndChangeImage();
+      }
+    }
 
-                <div style="display: inline-block;">
+    function fadeOutAndChangeImage() {
+      const imageElement = document.querySelector('#image-display img');
+      imageElement.style.opacity = 0;
 
-                    <img src="images/portfolio/2023-11-24_16_16_42_GitHub_Logo-removebg-preview.png" alt="">
-
-                    <li><span> <a href="https://github.com/Omccc">https://github.com/Omccc</a></span></li>
-                </div>
-          
-              </ul>
-
-            </div>
-          </div>
-
-          <div id="contact" class="col-lg-6">
-            <form action="forms/contact.php" method="post" role="form" class="php-email-form">
-              <div class="row gy-3">
-
-                <div class="col-lg-6">
-                  <div class="form-group contact-block1">
-                    <input type="text" name="name" class="form-control" id="name" placeholder="Your Name" required>
-                  </div>
-                </div>
-
-                <div class="col-lg-6">
-                  <div class="form-group">
-                    <input type="email" class="form-control" name="email" id="email" placeholder="Your Email" required>
-                  </div>
-                </div>
-
-                <div class="col-lg-12">
-                  <div class="form-group">
-                    <input type="text" class="form-control" name="subject" id="subject" placeholder="Subject" required>
-                  </div>
-                </div>
-
-                <div class="col-lg-12">
-                  <div class="form-group">
-                    <textarea class="form-control" name="message" placeholder="Message" required></textarea>
-                  </div>
-                </div>
-
-                <!-- <div class="col-lg-12">
-                  <div class="loading">Loading</div>
-                  <div class="error-message"></div>
-                  <div class="sent-message">Your message has been sent. Thank you!</div>
-                </div> -->
-
-                <div class="mt-0">
-                  <input style="color: aqua;" type="submit" class="btn btn-defeault btn-send" value="Send message">
-                </div>
-
-              </div>
-            </form>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div><!-- End Contact Section -->
-
-
-
-
-
-
-
-
-
-
-
-
-
-<!-- Footer Starts -->
-<div class="footer text-center spacer">
-<p class="wowload flipInX"><a href="https://www.linkedin.com/in/omar-chaabouni-0b0175aa/"><i class="fa fa-linkedin fa-2x"></i></a> <a href="https://github.com/Omccc"><i class="fa fa-github fa-2x"></i></a> <a href="o.chaabouni@gmail.com"><i class="fa fa-envelope fa-2x"></i></a></p>
-Copyright 2023 OC. All rights reserved.
-</div>
-<!-- # Footer Ends -->
-<a href="#home" class="gototop "><i class="fa fa-angle-up  fa-3x"></i></a>
-
-
-
-
-
-<!-- The Bootstrap Image Gallery lightbox, should be a child element of the document body -->
-<div id="blueimp-gallery" class="blueimp-gallery blueimp-gallery-controls">
-    <!-- The container for the modal slides -->
-    <div class="slides"></div>
-    <!-- Controls for the borderless lightbox -->
-    <h3 class="title">Title</h3>
-    <a class="prev">‹</a>
-    <a class="next">›</a>
-    <a class="close">×</a>
-    <!-- The modal dialog, which will be used to wrap the lightbox content -->    
-</div>
-
-
-
-<!-- jquery -->
-<script src="assets/jquery.js"></script>
-
-
-
-<!-- wow script -->
-<script src="assets/wow/wow.min.js"></script>
-
-
-<!-- boostrap -->
-<script src="assets/bootstrap/js/bootstrap.js" type="text/javascript" ></script>
-
-<!-- jquery mobile -->
-<script src="assets/mobile/touchSwipe.min.js"></script>
-<script src="assets/respond/respond.js"></script>
-
-<!-- gallery -->
-<script src="assets/gallery/jquery.blueimp-gallery.min.js"></script>
-
-
-
-
-<!-- custom script -->
-<script src="assets/script.js"></script>
-
+      // Attendre la fin de l'animation de fondu avant de changer l'image
+      setTimeout(() => {
+        displayImage(images[currentIndex].urls.regular);
+      }, 500);
+    }
+  </script>
 </body>
 </html>
